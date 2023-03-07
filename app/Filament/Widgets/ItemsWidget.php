@@ -26,7 +26,7 @@ class ItemsWidget extends BaseWidget
                 ->sortable()
                 ->searchable(),
             TextColumn::make('amount')
-                ->action(fn ($record) => !$record->isFirstInOrder() ? $record->moveOrderUp() : null)
+//                ->action(fn ($record) => !$record->isFirstInOrder() ? $record->moveOrderUp() : null)
                 ->sortable(),
             TextColumn::make('category.name')
                 ->sortable()
