@@ -12,6 +12,11 @@ class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function canAccessFilament(): bool
+    {
+        return true;
+    }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -41,9 +46,4 @@ class User extends Authenticatable implements FilamentUser
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function canAccessFilament(): bool
-    {
-        return true;
-    }
 }
